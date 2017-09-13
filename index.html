@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+        <link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
+		    <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link href="skins\square\red.css" rel="stylesheet">
+
+        <title>friend.fail - the game of failing to know your friends</title>
+        <link rel="shortcut icon" href="favicon.png"/>
+
+		    <meta name="description" content="Free, local multiplayer mobile game, about failing to know your friends."/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta charset="utf-8">
+
+        <meta property="og:title" content="friend.fail - fail as a friend" />
+        <meta property="og:url" content="http://friend.fail/" />
+        <meta property="og:type" content="game" />
+        <meta property="og:description" content="The free, local multiplayer, mobile game, about failing to know your friends." />
+        <meta property="og:image" content="http://friend.fail/facebook.jpg" />
+    </head>
+
+    <body>
+    <script>
+		$(document).ready(function(){
+		$('input').iCheck({
+		checkboxClass: 'icheckbox_square-red',
+		radioClass: 'iradio_square-red'});});
+    </script>
+
+        <div class="header">
+            <h2 id="roundCounter">F.F 0.9</h2>
+            <h1 id="roundName"><b>friend<i class="material-icons md-36">favorite</i>fail</b></h1>
+            <h3 id="scoreCounter">- fail as a friend</h3>
+        </div>
+
+        <div class="menu" id="menu">
+            <h2 class="menuButton" id="button-startGame" onclick="menuPlay()"><i class="material-icons md-24">videogame_asset</i>play</h2>
+            <h2 class="menuButton" id="button-help" onclick="menuHelp()"><i class="material-icons md-24">library_books</i>help</h2>
+            <h2 class="menuButton" id="button-about" onclick="menuAbout()"><i class="material-icons md-24">face</i>about</h2>
+
+            <h2 id="menu-help">friend.fail is a local multiplayer mobile game, about failing to know your friends, family, lovers and coworkers.</br></br>
+			      <hr></br>
+            The game is more about discussing the fails and getting to know each other, then who gets the most points.</br></br>
+            Why did Annie, of all people, think that Bob doesn't consider himself a leader? And why, excactly, does he?</br></br>
+            <hr></br>
+            The instructions in-game will tell you to:</br></br>
+            1. Gather your friends, name them and press play.</br></br>
+            2. Each round revolves around one player. The round starts with this player answering 5 questions regarding their personality.</br></br>
+            4. friend.fail then asks the other players to guess what they think he or she answered.</br></br>
+            5. This goes on to all players have guessed in turn. All fails should then be read out loud and discussed, ending the round.</br></br>
+            6. A new round is started, regarding the next player. This goes on to all players have had their rounds.</br></br>
+            7. When the set number of rounds are thru, the game is over. You may then start a new set of friend.fail rounds.</br></br></h2>
+
+            <h2 id="menu-about">friend.fail is a game by <a href="http://www.olepetterstokke.no">Ole Petter Baugerød Stokke</a> - a Norwegian hobbyist.</br></br>
+            <hr></br>
+            failmail:</br> <a href="mailto:friend@friend.fail">friend@friend.fail</a></br></br>
+            celebrity fails:</br> <a href="http://friend.fail/celebrities">friend.fail/celebrities</a></br></br>
+            <hr></br>
+            Most of the <span id="span-Questions"></span> questions in this game are outright stolen from a number of personality tests. Sorry. </br></br>
+            <hr></br>
+			follow friend.fail:</br>
+			<div class="fb-like" data-href="https://www.facebook.com/friendfailgame/" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+			<hr></br>
+            More info, and other projects:</br>
+            <a href="https://www.facebook.com/friendfailgame/">friend.fail on Facebook</a></br>
+            <a href="http://www.olepetterstokke.no">OlePetterStokke.no</a></br>
+            <a href="http://www.fyllesnakk.no">fyllesnakk.no</a></br>
+            <a href="http://www.grøfta.no">grøfta.no</a></br>
+            </br></h2>
+
+            <h2 class="menuButton" id="button-back" onclick="menuBack()"><i class="material-icons md-24">arrow_back</i></h2>
+        </div>
+
+        <div class="playArea" id="playArea">
+            <h2 id="topText"></h2>
+            <div id="textFields"></div>
+            <button id="button-add" onclick="addTextField()"><i class="material-icons md-48">person_add</i></button>
+            <button id="button-confirm" onclick="confirmPlayers()"><b><i class="material-icons md-48">play_arrow</i></b></button>
+
+            <div id="questionArea1">
+                <h2 id="question1"></h2>
+                <form id="form1">
+                    <input type="radio" id="yes1" name="selector">
+                    <label for="yes1">AGREE</label>
+                    <input type="radio" id="no1" name="selector">
+                    <label for="no1">DISAGREE</label>
+                </form>
+                </br><hr>
+            </div>
+
+            <div id="questionArea2">
+                <h2 id="question2"></h2>
+                <form id="form2">
+                    <input type="radio" id="yes2" name="selector">
+                    <label for="yes2">AGREE</label>
+                    <input type="radio" id="no2" name="selector">
+                    <label for="no2">DISAGREE</label>
+                </form>
+                </br><hr>
+            </div>
+
+            <div id="questionArea3">
+            <h2 id="question3"></h2>
+                <form id="form3">
+                    <input type="radio" id="yes3" name="selector">
+                    <label for="yes3">AGREE</label>
+                    <input type="radio" id="no3" name="selector">
+                    <label for="no3">DISAGREE</label>
+                </form>
+                </br><hr>
+            </div>
+
+            <div id="questionArea4">
+            <h2 id="question4"></h2>
+                <form id="form4">
+                    <input type="radio" id="yes4" name="selector">
+                    <label for="yes4">AGREE</label>
+                    <input type="radio" id="no4" name="selector">
+                    <label for="no4">DISAGREE</label>
+                </form>
+                </br><hr>
+            </div>
+
+            <div id="questionArea5">
+            <h2 id="question5"></h2>
+                <form id="form5">
+                    <input type="radio" id="yes5" name="selector">
+                    <label for="yes5">AGREE</label>
+                    <input type="radio" id="no5" name="selector">
+                    <label for="no5">DISAGREE</label>
+                </form>
+            </div>
+
+            <button id="button-answer" onclick="confirmAnswers()"><i class="material-icons md-48">check</i></button>
+            <button id="button-newRound" onclick="startNewRound()"><i class="material-icons md-48">arrow_forward</i></button>
+            <button id="button-exitGame" onclick="exitGame()"><i class="material-icons md-48">close</i></button>
+            <button id="button-newGame" onclick="startNewGame()"><i class="material-icons md-48">playlist_add_check</i></button>
+        </div>
+
+        <script src="icheck.js"></script>
+        <script src="questions.js"></script>
+        <script src="script.js"></script>
+
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-74447519-5', 'auto');
+            ga('send', 'pageview');
+        </script>
+
+    </body>
+
+<!--
+   __      _                _    __      _ _
+  / _|    (_)              | |  / _|    (_) |
+ | |_ _ __ _  ___ _ __   __| | | |_ __ _ _| |
+ |  _| '__| |/ _ \ '_ \ / _` | |  _/ _` | | |
+ | | | |  | |  __/ | | | (_| |_| || (_| | | |
+ |_| |_|  |_|\___|_| |_|\__,_(_)_| \__,_|_|_|
+                                             (C)2017
+-->
+
+</html>

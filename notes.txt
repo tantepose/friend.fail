@@ -1,0 +1,75 @@
+/*bruker: http://icheck.fronteed.com/
+
+20.2.2017
+* unødvendig tungvindt å ha alle spørsmål for seg, bare en spørsmålsdiv med alt?
+
+22.2.2017
+* betatesta med hanna og merethe, gøy å spille
+* for å klare flere runder enn playercount må ting gjøres som krever mer system:
+
+|
+|"onload" (hallo hvem er dere)
+|
+|___|
+    |"game" (lets go/again) [tidl megamegaround]
+    |
+	|___|
+        |"round" (x/x: ok lets talk about) [tidl megaround]
+		|
+		|___|
+            |"turn" (knut, now you guess) [tidl round]
+			|
+
+* heller ha flere knapper å skjule og vise enn å prøve å bruke én til alt om det blir knot
+
+23.2.2017
+* nå funker alt, tilsynelatende.
+* laga tre forbokstaver i scoretext, nye games funker, alt ser stabilt ut
+* neste skritt design?
+* og det jævla navnet. vurdere friend.fail-aktige navn
+
+2.3.2017
+* betatest med tobster og arildos, artig artig
+* lag punktlister for svarene som vises så enklere å lese
+    FIKSA 6.3.2017
+* fikse bedre semantikk for svarene
+    FIKS: lister med motspillernes resultater og så fasit
+* BUG: poeng av hvor mange poeng er feil
+    FIKS: antall spillere - 1 x games x 5
+* kjøpte friend.fail
+* prøver ut nye design, kanskje neon er greia?
+* bør kåre en vinner, lære å sortere verdier osv
+
+11.3.2017
+* eline-ligger-og-sover-session
+* spilt med jobben på aratakata, great sucsess
+* landa på design jeg liker nå, og lagt til streker i dag
+* poengsummer rangeres på slutten så vinner kåres
+* når uavgjort så vinner den ene, kjenner ikke hvordan fungerer og tenker at gir faen
+* gjenstår: desktop/brett-versjon, endre fargen på radioknapp igjen
+* test senere på kvelden på sosialen, BUG:
+    samme fokusspiller som forrige runde når starter nytt game
+    FIKS: arrayer oppfører seg rart, lest meg opp og fiksa håper jeg
+
+12.3.2017
+* markedsføringside: bilder av kjendiser og karakterer med passende spørsmål og svar
+* småbug: tekstfeltet som først addes er mindre enn de neste
+* lagt inn flere spørsmål, oppe i 400
+
+13.3.2017
+* test på søtten på sitti, megaBUG: feil spørsmål lastes når svar skal vises
+    FIKS: feil på laste spørsmål-loopen, må være fra 1 til 6
+
+14.3.2017:
+LAUNCH
+
+16.3.2017:
+* lagt til en exit-knapp når spillet er slutt, bare refresher sida, pappas forslag ja
+
+20.3.2017:
+* spilt i trondheim, great sucsess
+* skrifta på poenga fortsatt for stor, satt ned
+* mål: hvordan justere teksten ned om header blir for stor?
+* endra url til galleriet, ny lukkeknapp, fått inn antall spørsmål
+
+*/

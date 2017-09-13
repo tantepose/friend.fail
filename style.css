@@ -1,0 +1,228 @@
+/*
+:root
+{
+    --color1:#ed3e79;
+    --color2:#f4ebc4;
+	--color3:#001f3b;
+}
+*/
+
+::selection 
+{
+  background-color: #ed3e79;
+}
+
+body
+{
+    text-align: center;
+	font-family: 'Abel', sans-serif;
+    line-height: 180%;
+    margin: 0px;
+    background-color: #f4ebc4;
+    background-attachment: fixed;
+}
+
+.menu
+{
+    margin-top: 110px;
+    padding: 10px;
+    color:#001f3b;
+	display:inline-block;
+}
+
+.playArea
+{
+    color:#001f3b;
+    padding: 10px;
+    margin: 0px;
+    margin-top: 110px;
+    display:inline-block;
+}
+
+.header
+{
+    color: #001f3b;
+    background-color: #ed3e79;
+    padding: 0px;
+    margin: 0px;
+    position:fixed;
+    top:0px;
+    width: 100%;
+    z-index: 10;
+}
+
+button
+{
+	background-color:#f4ebc4;
+	padding: 20px;
+	margin: 20px;
+    vertical-align: middle;
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    border: 0px;
+	cursor: pointer;
+}
+
+hr
+{
+    border: 5px solid #ed3e79;
+    width: 70%;
+}
+
+.menuButton
+{
+	cursor: pointer;
+}
+
+input:hover
+{
+    color: #ed3e79;
+}
+
+.header
+{
+    font-family: 'Bungee', cursive;
+}
+
+h1, h2, h3
+{
+    padding: 0px;
+    margin: 5px;
+    cursor: default;
+}
+
+h1
+{
+    font-size: 35px;
+}
+
+h2
+{
+    font-size: 25px;
+}
+
+h3
+{
+    font-size: 15px;
+}
+
+a
+{
+    color:#ed3e79;
+}
+
+.header h3
+{
+	font-size: 12px;
+}
+.header h2
+{
+    margin-top: 10px;
+	font-size: 15px;
+}
+
+.header h1
+{
+	font-size: 35px;
+}
+
+label
+{
+    font-size: 15px;
+}
+
+input
+{
+    border: 5px solid #001f3b;
+	font-family: 'Abel', sans-serif;
+    font-size: 20px;
+    padding: 10px;
+    margin: 5px;
+    width: 50%;
+    text-align: center;
+    color: #001f3b;
+    background-color: #f4ebc4;
+    box-shadow: none;
+    font-weight: bold;
+}
+
+/* googles ikoner */
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 100px; 
+color:var(--colorDark)}}
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 70px; 
+color:var(--colorDark)}
+
+.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+
+/* nettbrett, desktop */
+@media screen and (min-width: 750px) 
+{
+    body
+    {
+        line-height: 200%;
+    }
+    .header h1
+    {
+        font-size: 60px;
+    }
+
+    .header h2
+    {
+        font-size: 30px;
+    }
+
+    h2
+    {
+        font-size: 35px;
+    }
+
+    .header h3
+    {
+        font-size: 25px;
+    }
+
+    .material-icons.md-24 
+    { 
+        font-size: 150px; 
+    }
+
+    .material-icons.md-36
+    { 
+        font-size: 40px; 
+    }
+
+    .playArea, .menu
+    {
+        text-align: center;
+        margin-top: 160px;
+        width: 80%;
+    }
+
+    .header
+    {
+        width: 80%;
+        text-align: center;
+        display:inline-block;
+        border-top: 20px solid #f4ebc4;
+    }
+
+    .menuButton:hover, button:hover, input:hover
+    {
+        color: #ed3e79;
+        transition: .2s;
+    }
+
+    input
+    {
+        font-size: 30px;
+        width: 30%;
+        margin: 10px;
+    }
+}
+
